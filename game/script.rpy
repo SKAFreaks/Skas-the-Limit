@@ -35,6 +35,16 @@ label start:
 
     mike "He pissed on my wife!"
 
+    damon "No I can't beleve Shadow would do this to RJ"
+
+label purgatory:
+
+    damon "Nooooooooooo"
+
+    damon "Don't do this to me shadow!"
+
+jump purgatory
+
     # This ends the game.
 
-    return
+return
