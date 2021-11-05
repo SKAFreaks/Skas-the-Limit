@@ -1,4 +1,7 @@
 **/saves
+**/cache
+*.rpyc
+*.rpymc
 errors.txt
 log.txt
 c
