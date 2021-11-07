@@ -42,4 +42,5 @@ jobs:
           automatic_release_tag: "Latest"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          files: ${{ steps.renpybuild.outputs.dir }}
+          files: /usr/bin |
+            *.zip
