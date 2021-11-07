@@ -33,10 +33,11 @@ jobs:
         uses: ProjectAliceDev/renpy-build-action@v1.2.0
         
       # Actually releases the thing
+      - name: Release the build
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           automatic_release_tag: "Latest"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          files: |
+          files: . |
             *.zip
