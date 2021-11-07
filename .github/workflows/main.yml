@@ -34,7 +34,7 @@ jobs:
         
       # Actually releases the thing
       - name: Release the build
-      - uses: "marvinpinto/action-automatic-releases@latest"
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
           automatic_release_tag: "Latest"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
