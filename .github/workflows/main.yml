@@ -32,7 +32,8 @@ jobs:
       - name: renpybuild
         uses: ProjectAliceDev/renpy-build-action@v1.2.0
         
-      - name: ${{ steps.renpybuild.outputs.dir }}
+      - name: Tell me the directory
+        run: echo ${{ steps.renpybuild.outputs.dir }}
         
       # Actually releases the thing
       - name: Release the build
