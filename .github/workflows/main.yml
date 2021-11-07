@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Build Ren'Py Project
+      - name: renpybuild
         uses: ProjectAliceDev/renpy-build-action@v1.2.0
         
       # Actually releases the thing
@@ -39,5 +39,4 @@ jobs:
           automatic_release_tag: "Latest"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          files: . |
-            *.zip
+          files: ${{ steps.renpybuild.outputs.dir }}
