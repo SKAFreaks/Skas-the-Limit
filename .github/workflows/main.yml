@@ -38,4 +38,5 @@ jobs:
           automatic_release_tag: "Latest"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          files: dir
+          files: |
+            *.zip
