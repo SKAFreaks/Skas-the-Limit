@@ -35,6 +35,7 @@ jobs:
       # Actually releases the thing
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
+          automatic_release_tag: "Latest"
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           files: dir
