@@ -10,7 +10,6 @@ define zoe = Character("Zoe")
 define danny = Character("Danny")
 define rj = Character("RJ")
 define damon = Character("Damon")
-define player = Character ("Ohio")
 
 
 
@@ -42,35 +41,6 @@ The test will begin on the word start.
 On your mark, get ready, start."
 
 
-    menu:
-        "What are your pronouns?"
-        "He/Him":
-            $ player.pSingular = "he"
-            $ player.pPossesive = "him"
-        "She/Her":
-            $ player.pSingular = "she"
-            $ player.pPossesive = "her"
-        "They/Them":
-            $ player.pSingular = "they"
-            $ player.pPossesive = "them"
-        "Someone else":
-            python:
-                validInput = False
-                while not validInput:
-                    pronouns = renpy.input("What are your pronouns? Please input in all lowercase with a / between and no spaces. EX: xe/xem")
-                    if "/" in pronouns:
-                        pronouns = pronouns.split("/")
-                        validInput = True
-                    else:
-                        mike("Please input your pronouns in the stated format")
-
-                player.pSingular = pronouns[0]
-                player.pPossesive = pronouns[1]
-
-label afterPronouns:
-    $ mike("Nice pronouns my dude! " + player.pSingular + "/" + player.pPossesive)
-
     # This ends the game.
-
 
 return
