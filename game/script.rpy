@@ -54,21 +54,11 @@ On your mark, get ready, start."
             $ player.pSingular = "they"
             $ player.pPossesive = "them"
         "Someone else":
-            python:
-                validInput = False
-                while not validInput:
-                    pronouns = renpy.input("What are your pronouns? Please input in all lowercase with a / between and no spaces. EX: xe/xem")
-                    if "/" in pronouns:
-                        pronouns = pronouns.split("/")
-                        validInput = True
-                    else:
-                        mike("Please input your pronouns in the stated format")
-
-                player.pSingular = pronouns[0]
-                player.pPossesive = pronouns[1]
+            $ player.pSingular = renpy.input("What is your singular pronoun? EX: he"
+            $ player.pPossesive = renpy.input("What is your possessive pronoun? EX: him"
 
 label afterPronouns:
-    $ mike("Nice pronouns my dude! " + player.pSingular + "/" + player.pPossesive)
+    mike "Nice pronouns my dude! [player.pSingular] / [player.pPossesive]"
 
     # This ends the game.
 
