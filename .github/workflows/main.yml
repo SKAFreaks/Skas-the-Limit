@@ -38,12 +38,12 @@ jobs:
         
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: GongT/actions-recreate-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: latest
-          release_name: Release ${{ github.ref }} ${{ github.run_number }} ${{ github.run_attempt }}
+          release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
           
