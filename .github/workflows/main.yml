@@ -29,8 +29,9 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: renpybuild
+      - name: Build the project!
         uses: ProjectAliceDev/renpy-build-action@v1.2.0
+        id: renpybuild
         
       - name: Tell me the directory
         run: echo ${{ steps.renpybuild.outputs.dir }}
