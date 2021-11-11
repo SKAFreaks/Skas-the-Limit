@@ -33,7 +33,7 @@ jobs:
         uses: ProjectAliceDev/renpy-build-action@v1.2.0
         
       - name: Tell me the directory
-        run: echo ${{ steps.renpybuild.outputs.dir }} + "/my-artifact.zip"
+        run: echo ${{ steps.renpybuild.outputs.dir }}
         
       - name: Create Release
         id: create_release
