@@ -4,4 +4,5 @@
 *.rpymc
 errors.txt
 log.txt
+traceback.txt
 c
