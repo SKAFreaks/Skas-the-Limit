@@ -45,7 +45,7 @@ On your mark, get ready, start."
 
 label afterPronouns:
     narrator "Howdy"
-    mike "Nice to meet you [narrator.save_name]. I hear you use [narrator.pSingular]/[narrator.pPossesive] pronouns."
+    mike "Nice to meet you [narrator.name]. I hear you use [narrator.pSingular]/[narrator.pPossesive] pronouns."
 
     # This ends the game.
 

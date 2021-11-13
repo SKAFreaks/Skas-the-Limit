@@ -1,5 +1,5 @@
 label intro:
-    $ narrator.save_name = renpy.input("What's your name?")
+    $ narrator.name = renpy.input("What's your name?")
     menu:
         "What are your pronouns?"
         "He/Him":
