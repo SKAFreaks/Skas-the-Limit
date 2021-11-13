@@ -10,7 +10,6 @@ define zoe = Character("Zoe")
 define danny = Character("Danny")
 define rj = Character("RJ")
 define damon = Character("Damon")
-define player = Character ("Ohio")
 
 
 
@@ -41,24 +40,12 @@ The second time you fail to complete a lap before the sound, your test is over.
 The test will begin on the word start.
 On your mark, get ready, start."
 
+    jump intro
 
-    menu:
-        "What are your pronouns?"
-        "He/Him":
-            $ player.pSingular = "he"
-            $ player.pPossesive = "him"
-        "She/Her":
-            $ player.pSingular = "she"
-            $ player.pPossesive = "her"
-        "They/Them":
-            $ player.pSingular = "they"
-            $ player.pPossesive = "them"
-        "Someone else":
-            $ player.pSingular = renpy.input("What is your singular pronoun? EX: he"
-            $ player.pPossesive = renpy.input("What is your possessive pronoun? EX: him"
 
 label afterPronouns:
-    mike "Nice pronouns my dude! [player.pSingular] / [player.pPossesive]"
+    narrator "Howdy"
+    mike "Nice to meet you [narrator.save_name]. I hear you use [narrator.pSingular]/[narrator.pPossesive] pronouns."
 
     # This ends the game.
 
